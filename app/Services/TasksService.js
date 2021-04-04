@@ -11,25 +11,26 @@ class TasksService {
     }
 
     addTask(newTas) {
-        ProxyState.tasks.push(new Task(newTas.name, newTas.listId))
+        ProxyState.tasks.push(new Task(newTas.name, newTas.listId, newTas.checked, newTas.id))
         saveState()
         ProxyState.tasks = ProxyState.tasks
     }
 
-    // completed(id) {
-    //     ProxyState.tasks = ProxyState.tasks.find(t => id == t.id)
-    //     Task.completed = true
-    //     Template() {
-    //         if (this.completed) {
-    //             return ``
-    //         } else {
-    //             return ``
-    //         }
-    //     }
+    completed(bool, id) {
+        ProxyState.tasks.find(t => id == t.id).checked = bool
+        saveState()
+        ProxyState.tasks = ProxyState.tasks
 
-    //     saveState()
-    // }
+    }
+
 
 }
 
+
 export const tasksService = new TasksService();
+//     Template() {
+//         if (this.completed) {
+//             return ``
+//         } else {
+//             return ``
+//         }

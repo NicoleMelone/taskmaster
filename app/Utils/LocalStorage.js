@@ -15,6 +15,6 @@ export function loadState() {
     let data = JSON.parse(localStorage.getItem('taskmaster'))
     if (data) {
         ProxyState.lists = data.lists.map(list => new List(list.name, list.color, list.id));
-        ProxyState.tasks = data.tasks.map(tas => new Task(tas.name, tas.listId, tas.id));
+        ProxyState.tasks = data.tasks.map(tas => new Task(tas.name, tas.listId, tas.id, tas.checked));
     }
 }

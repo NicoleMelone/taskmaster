@@ -56,7 +56,7 @@ html {
 
 .green {
   background-color: var(--success);
-  color: var(--dark);
+  color: var(--light);
 }
 
 .blue {
@@ -66,7 +66,7 @@ html {
 
 .purple {
   background-color: var(--indigo);
-  color: var(--white);
+  color: var(--light);
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {

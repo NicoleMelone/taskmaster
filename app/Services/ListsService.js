@@ -11,7 +11,7 @@ class ListsService {
     addList(newList) {
         ProxyState.lists = [...ProxyState.lists, new List(newList.name, newList.color)]
         saveState()
-        console.log(newList)
+
     }
 
 }

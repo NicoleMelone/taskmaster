@@ -17,7 +17,7 @@ export default class TasksController {
         tasksService.deleteTask(id)
     }
 
-    completed(id) {
-        tasksService.completed(id)
+    completed(bool, id) {
+        tasksService.completed(bool, id)
     }
 }
