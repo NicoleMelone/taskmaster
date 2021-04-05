@@ -9,13 +9,15 @@ export default class List {
     }
 
     get Template() {
-        return `<div class="col-md-4">
+        return `<div class="col-md-4 mb-3">
         <div class="list-card shadow bg-white text-center rounded">
-            <div class="text-center ${this.color} p-2 d-flex justify-content-between">
-                <div class="d-flex flex-row">
-                <i class="fas fa-times ml-2" onclick="app.listsController.deleteList('${this.id}')"></i>
-                    <h2 class="text-center">${this.name}</h2>
-                    <div class="text-light text-center d-flex align-items-end">${this.CompletedTasks}/${this.Total} remaining!</div>
+            <div class="text-center ${this.color} p-2">
+                <div class="d-flex flex-column text-center">
+                <i class="fas fa-times ml-2 d-flex justify-content-end" onclick="app.listsController.deleteList('${this.id}')"></i>
+                <div class="d-flex flex-column justify-content-start text-center">
+                    <span class="d-flex justify-content-start text-center"><h3>${this.name}</h3></span>
+                    <div class="text-light">${this.CompletedTasks}/${this.Total} remaining!</div>
+                </div>
                 </div>
             </div>
             <div class="p-3">
